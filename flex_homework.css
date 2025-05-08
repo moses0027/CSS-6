@@ -1,0 +1,76 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+h1{
+    margin-bottom: 30px;
+}
+
+.desktop-menu{
+    text-align: center;
+    background: #f8f8f8;
+    padding: 12px 0;
+    margin-bottom: 20px;
+}
+
+.nav-toggle{ display:none; }
+
+.hamburger{
+    display: none;
+    font-size: 26px;
+    padding: 6px 18px;
+    color: #fff;
+    background: #1a1a3d;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ─── 作品卡片 ─── */
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+.flower-card{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+}
+.flower-title,
+.flower-image{
+    background-color: #00ffff;
+}
+.flower-title{
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.flower-image{
+    padding: 10px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.flower-image img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px){
+    .flower-card{ width: 48%; }
+}
+
+@media (max-width: 500px){
+    .hamburger{ display: block; }
+    .desktop-menu{ display: none; }
+    .nav-toggle:checked ~ .desktop-menu{
+        display: block;
+    }
+    .flower-card{ width: 100%; }
+}
